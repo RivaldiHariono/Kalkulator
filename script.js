@@ -7,7 +7,12 @@ let del = document.querySelector(".del");
 tombol.addEventListener("click",function(e) {
     let btnClick = e.target;
     let num = btnClick.innerText;
-    if(num != 'C' && num != 'Del'){
+
+    if (num == '=') {
+        layar.value = eval(layar.value)
+    }
+
+    else if(num != 'C' && num != 'Del'){
         layar.value = layar.value + num;
     }
 });
